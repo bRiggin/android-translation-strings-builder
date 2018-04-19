@@ -52,7 +52,7 @@ This tool has been designed to handle the following strings.xml elements:
 * String-arrays
 * Plurals
 
-The tool has also be designed to capture string modifiers (<b></b>, <u></u>, etc).
+The tool has also be designed to capture string modifiers (\<b>\</b>, \<u>\</u>, etc).
 
 Each constructed strings.xml file will be placed within it's own folder, the title of this folder will be dictated by the column heading for that language within the Excel spreadsheet. 
 
