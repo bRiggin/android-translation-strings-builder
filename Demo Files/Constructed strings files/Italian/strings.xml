@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="tool_name">Strumento</string>
+	<string name="ui_string">Stringa UI normale senza modificatori.</string>
+	<string name="altered_ui_string_1">
+		<b>Stringa UI in grassetto.</b>
+	</string>
+	<string name="altered_ui_string_2">
+		<b>
+			<u>Stringa UI grassetto e sottolineato.</u>
+		</b>
+	</string>
+	<string-array name="languages">
+		<item>Inglese</item>
+		<item>Francese</item>
+		<item>Spagnolo</item>
+		<item>Tedesco</item>
+		<item>Italiano</item>
+	</string-array>
+	<string-array name="planets_array_with_modifiers">
+		<item>
+			<b>Mercurio</b>
+		</item>
+		<item>
+			<u>
+				<b>Venere</b>
+			</u>
+		</item>
+		<item>Terra</item>
+		<item>
+			<i>Marte</i>
+		</item>
+	</string-array>
+	<plurals name="number_of_items_found">
+		<item quantity="zero">Nessun articolo trovato.</item>
+		<item quantity="one">Un oggetto trovato.</item>
+		<item quantity="two">Sono stati trovati due oggetti.</item>
+		<item quantity="few">Alcuni elementi trovati.</item>
+		<item quantity="many">Molti oggetti trovati.</item>
+		<item quantity="other">Oggetti trovati.</item>
+	</plurals>
+	<plurals name="number_of_items_found_with_mods">
+		<item quantity="zero">Nessun articolo trovato.</item>
+		<item quantity="one">
+			<b>Un oggetto trovato.</b>
+		</item>
+		<item quantity="two">
+			<i>Sono stati trovati due oggetti.</i>
+		</item>
+		<item quantity="few">
+			<u>Alcuni elementi trovati.</u>
+		</item>
+		<item quantity="many">
+			<b>
+				<i>
+					<u>Molti oggetti trovati.</u>
+				</i>
+			</b>
+		</item>
+	</plurals>
+</resources>

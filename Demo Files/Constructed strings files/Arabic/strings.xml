@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="tool_name">أداة android-translation-strings</string>
+	<string name="ui_string">سلسلة UI العادية بدون معدِّلات.</string>
+	<string name="altered_ui_string_1">
+		<b>سلسلة UI جريئة.</b>
+	</string>
+	<string name="altered_ui_string_2">
+		<b>
+			<u>سلسلة UI غامقة ومسطرة.</u>
+		</b>
+	</string>
+	<string-array name="languages">
+		<item>الإنجليزية</item>
+		<item>الفرنسية</item>
+		<item>الأسبانية</item>
+		<item>ألمانية</item>
+		<item>الإيطالي</item>
+	</string-array>
+	<string-array name="planets_array_with_modifiers">
+		<item>
+			<b>والزئبق</b>
+		</item>
+		<item>
+			<u>
+				<b>كوكب الزهرة</b>
+			</u>
+		</item>
+		<item>أرض</item>
+		<item>
+			<i>المريخ</i>
+		</item>
+	</string-array>
+	<plurals name="number_of_items_found">
+		<item quantity="zero">لم يتم العثور على العناصر.</item>
+		<item quantity="one">تم العثور على عنصر واحد.</item>
+		<item quantity="two">تم العثور على مادتين.</item>
+		<item quantity="few">تم العثور على بعض العناصر.</item>
+		<item quantity="many">تم العثور على العديد من العناصر.</item>
+		<item quantity="other">العناصر الموجودة.</item>
+	</plurals>
+	<plurals name="number_of_items_found_with_mods">
+		<item quantity="zero">لم يتم العثور على العناصر.</item>
+		<item quantity="one">
+			<b>تم العثور على عنصر واحد.</b>
+		</item>
+		<item quantity="two">
+			<i>تم العثور على مادتين.</i>
+		</item>
+		<item quantity="few">
+			<u>تم العثور على بعض العناصر.</u>
+		</item>
+		<item quantity="many">
+			<b>
+				<i>
+					<u>تم العثور على العديد من العناصر.</u>
+				</i>
+			</b>
+		</item>
+	</plurals>
+</resources>

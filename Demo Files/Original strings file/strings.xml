@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="tool_name">android-translation-strings Tool</string>
+	<string name="ui_string">Normal UI string with no modifiers.</string>
+	<string name="altered_ui_string_1"><b>Bold UI string</b></string>
+	<string name="altered_ui_string_2"><b><u>Bold and underlined UI string.</u></b></string>
+
+	<string-array name="languages">
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>Italian</item>
+    </string-array>
+
+	<string-array name="planets_array_with_modifiers">
+        <item><b>Mercury</b></item>
+        <item><u><b>Venus</b></u></item>
+        <item>Earth</item>
+        <item><i>Mars</i></item>
+    </string-array>
+
+    <plurals name="number_of_items_found">
+        <item quantity="zero">No items found.</item>
+        <item quantity="one">One item found.</item>
+        <item quantity="two">Two items found.</item>
+        <item quantity="few">A few items found.</item>
+        <item quantity="many">Many items found.</item>
+        <item quantity="other">Items found.</item>
+    </plurals>
+
+    <plurals name="number_of_items_found_with_mods">
+        <item quantity="zero">No items found.</item>
+        <item quantity="one"><b>One item found.</b></item>
+        <item quantity="two"><i>Two items found.</i></item>
+        <item quantity="few"><u>A few items found.</u></item>
+        <item quantity="many"><b><i><u>Many items found.</u></i></b></item>
+        <item quantity="other">Items found.</item>
+    </plurals>
+</resources>

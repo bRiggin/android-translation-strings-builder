@@ -1,8 +1,8 @@
 #
 #
 # Title:        translation_strings_tool.py
-# Updated:      19-04-2018
-# Version:      v2.0.0
+# Updated:      20-04-2018
+# Version:      v2.0.1
 # Author:       bRiggin
 #
 #
@@ -664,14 +664,6 @@ def create_xml_file(worksheet, col_number, rows, xml_tree, path):
                                                          str(worksheet["C{}".format(row)].value), temp_value)
             xml_tree.append(string_element)
 
-        elif current_type == "string-array":
-            multiple_item_element = elementTree.Element('string-array')
-            multiple_item_element.set("name", str(worksheet["C{}".format(row)].value))
-
-        elif current_type == "plurals":
-            multiple_item_element = elementTree.Element('plurals')
-            multiple_item_element.set("name", str(worksheet["C{}".format(row)].value))
-
         elif str(worksheet["A{}".format(row)].value) == "item":
             # UI string has no modifiers
             if modifier_string is None:
@@ -689,11 +681,25 @@ def create_xml_file(worksheet, col_number, rows, xml_tree, path):
                 item_element.set("quantity", str(worksheet["C{}".format(row)].value))
 
             #
-            if str(worksheet["A{}".format(row+1)].value) != "item":
+            if str(worksheet["A{}".format(row+1)].value) != "item" or row == rows-1:
                 xml_tree.append(multiple_item_element)
+
+        elif current_type == "string-array":
+            multiple_item_element = elementTree.Element('string-array')
+            multiple_item_element.set("name", str(worksheet["C{}".format(row)].value))
+
+        elif current_type == "plurals":
+            multiple_item_element = elementTree.Element('plurals')
+            multiple_item_element.set("name", str(worksheet["C{}".format(row)].value))
         else:
             logger.warning("Found unknown XML type: \"{}\" Element has not been added.".
                            format(str(worksheet["{}1".format(get_column_value(row))].value)))
+
+        xml_string = elementTree.tostring(xml_tree)
+
+        xml = minidom.parseString(xml_string)
+        formatted_xml_string = xml.toprettyxml()
+        thing = 1
     save_xml_file(path, xml_tree)
 
 

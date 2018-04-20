@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="tool_name">android-translation-strings Outil</string>
+	<string name="ui_string">Chaîne d'interface utilisateur normale sans modificateurs.</string>
+	<string name="altered_ui_string_1">
+		<b>Chaîne d'interface utilisateur en gras.</b>
+	</string>
+	<string name="altered_ui_string_2">
+		<b>
+			<u>Chaîne d'interface utilisateur en gras et soulignée.</u>
+		</b>
+	</string>
+	<string-array name="languages">
+		<item>Anglais</item>
+		<item>Français</item>
+		<item>Espanol</item>
+		<item>Allemand</item>
+		<item>Italien</item>
+	</string-array>
+	<string-array name="planets_array_with_modifiers">
+		<item>
+			<b>Mercure</b>
+		</item>
+		<item>
+			<u>
+				<b>Vénus</b>
+			</u>
+		</item>
+		<item>Terre</item>
+		<item>
+			<i>Mars</i>
+		</item>
+	</string-array>
+	<plurals name="number_of_items_found">
+		<item quantity="zero">Aucun élément trouvé.</item>
+		<item quantity="one">Un article trouvé.</item>
+		<item quantity="two">Deux éléments trouvés.</item>
+		<item quantity="few">Quelques éléments trouvés.</item>
+		<item quantity="many">Beaucoup d'objets trouvés.</item>
+		<item quantity="other">Objets trouvés.</item>
+	</plurals>
+	<plurals name="number_of_items_found_with_mods">
+		<item quantity="zero">Aucun élément trouvé.</item>
+		<item quantity="one">
+			<b>Un article trouvé.</b>
+		</item>
+		<item quantity="two">
+			<i>Deux éléments trouvés.</i>
+		</item>
+		<item quantity="few">
+			<u>Quelques éléments trouvés.</u>
+		</item>
+		<item quantity="many">
+			<b>
+				<i>
+					<u>Beaucoup d'objets trouvés.</u>
+				</i>
+			</b>
+		</item>
+	</plurals>
+</resources>
