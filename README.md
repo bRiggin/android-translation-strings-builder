@@ -1,88 +1,62 @@
-# android-translation-strings
-This tool has been designed to simplify the file deconstruction/construction required during the process of extending an Android project’s User Interface (UI) strings.xml file to different languages.
+# android-translation-strings Tool
+I wanted to create an easy to use, lightweight tool that performs the difficult bit of creating the required string.xml translation files in an Android project.
 
-The tool iterrogates the provided strings.xml file and uses its contents to populated a structured spreadsheet. The translated UI strings can then can copied into this spreadsheet along side the original language and the tool will reverse the process and create the appropriate strings.xml files for all supplied languages. 
+This is a Python tool that converts an Android project's strings.xml file into a structured Excel spreadsheet. The spreadsheet can then be populated with translated strings and the Python tool can reverse the process and produce all required strings.xml files.
+
+I hope someone else finds it helpful. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Simply download the translation_strings_tool.py file, open a Python terminal and change directories (cd) into the location of the tool.
+
+The tool can be operated in two modes:  
+* Deconstruction (-d), where the tool will deconstruct the data within a strings.xml file and structure it into an Excel spreadsheet. 
+* Construction (-c), where the tool will create a strings.xml file for each of the Languages that has been included within the Excel file.
+
+The tool is invoked as follows:
+
+```
+path/to/tool python translation_strings_tool.py MODE EXCEL_FILE SOURCE_PATH STORAGE_PATH
+```
+
+Where:
+
+* MODE - Mode of operation, -d or -c (-h will bring up help information).
+* EXCEL_FILE - The file name of the Excel spreadsheet that will be created or is being read from.
+* SOURCE_PATH	- The directory of the file being read (Excel file or string.xml file).
+* STORAGE_PATH - THe directory where the output file(s) will be stored. This is optional, if not included, output files will be stored at SOURCE_PATH.
+
+Examples:
+
+```
+path/to/tool python translation_strings_tool.py -d testSpreadsheet "/Users/Desktop"
+```
+Will create testSpreadsheet.xlsx and will be stored at /Users/Desktop/testSpreadsheet.xlsx
+```
+path/to/tool python translation_strings_tool.py -c testSpreadsheet "/Users/Desktop" "/Users/Desktop/stringFiles"
+```
+Will create language folders at /Users/Desktop/stringFiles from /Users/Desktop/testSpreadsheet.xlsx
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+This tool was developed using Python 3.6.5 and utilises the following non-standard library:
 
-```
-Give examples
-```
+* openpyxl
 
-### Installing
+## Notes
 
-A step by step series of examples that tell you have to get a development env running
+This tool has been designed to handle the following strings.xml elements:
 
-Say what the step will be
+* Strings
+* String-arrays
+* Plurals
 
-```
-Give the example
-```
+The tool has also be designed to capture string modifiers (\<b>\</b>, \<u>\</u>, etc).
 
-And repeat
+Each constructed strings.xml file will be placed within it's own folder, the title of this folder will be dictated by the column heading for that language within the Excel spreadsheet. 
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+WARNING - This tool will automatically overwrite files with identical titles.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE.md] file for details
