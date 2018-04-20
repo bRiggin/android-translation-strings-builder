@@ -1,4 +1,4 @@
-# android-translation-strings Tool
+# Android Translation Strings Builder
 I wanted to create an easy to use, lightweight tool that performs the difficult bit of creating the required string.xml translation files in an Android project.
 
 This is a Python tool that converts an Android project's strings.xml file into a structured Excel spreadsheet. The spreadsheet can then be populated with translated strings and the Python tool can reverse the process and produce all required strings.xml files.
